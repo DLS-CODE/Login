@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// appComponent
+.alingContNavbar{
+  display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.alingContFooter{
+  display: flex;
+flex-direction: row;
+  justify-content: center;
+}
+.footer{
+  bottom: 0;
+  position: absolute;
+  font-size: small;
+}
+.spaContent{
+  width: min-content;
+  height: min-content;
+  margin-top: 10vmin;
+  padding: 5vmin;
+  
+}
+.scope{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+// loginComponent
+
+.form{
+  // display: flex;
+  // flex-direction: column;
+  align-items: center;
+}
+.form, .formItem{
+  display: flex;
+  flex-direction: column;
+
+}
+// .formItem{
+//     display: flex;
+//     flex-direction: column;
+// }
+.icon{
+  font-size: 700%;
+  color:#257BFD;
+  margin-bottom: 5vmin;
+}
+.item{
+  width: 50vmin;
+}
+.loginRegister{
+  display: flex;
+  width: 100%;
+flex-direction:row;
+justify-content: space-between;
+  color:grey;
+}
+
+.linea{
+width: 100%;
+color: indigo;
+font-weight: bolder;
+margin-bottom: 5vmin;
+}

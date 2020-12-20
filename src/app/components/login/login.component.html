@@ -1,0 +1,34 @@
+<div class="form">
+  <div class="loginRegister">
+    <div class="link">
+      <button mat-button [routerLink]="[ '/login' ]" routerLinkActive="active">Login</button>
+    </div>
+
+    <div class="link">
+      <button mat-button [routerLink]="[ '/register' ]" routerLinkActive="active">Register</button>
+    </div>
+  </div>
+
+  <div class="linea">
+    <hr>
+  </div>
+
+  <i class="fas fa-user icon"></i>
+
+
+
+  <form class="formItem" autocomplete="off" [formGroup]="forma" (ngSubmit)="entrar()">
+
+    <mat-form-field class="item">
+      <mat-label>Email</mat-label>
+      <input formControlName="Email" type="email" matInput placeholder="juan@gmail.com">
+    </mat-form-field>
+
+    <mat-form-field class="item">
+      <mat-label>Contraseña</mat-label>
+      <input formControlName="Password" type="password" matInput placeholder="Contraseña">
+    </mat-form-field>
+
+    <button class="item" mat-raised-button color="primary">Entrar</button>
+  </form>
+</div>
