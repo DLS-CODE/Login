@@ -10,71 +10,75 @@ body {
 }
 
 // appComponent
-.alingContNavbar{
+.alingContNavbar {
   display: flex;
-flex-direction: row;
-justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.alingContFooter{
+.alingContFooter {
   display: flex;
-flex-direction: row;
+  flex-direction: row;
   justify-content: center;
 }
-.footer{
+.footer {
   bottom: 0;
-  position: absolute;
+  // position: absolute;
+  position:fixed;
   font-size: small;
 }
-.spaContent{
+.spaContent {
   width: min-content;
   height: min-content;
   margin-top: 10vmin;
   padding: 5vmin;
-  
+  margin-bottom: 10vmin;
 }
-.scope{
+.scope {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 // loginComponent
 
-.form{
+.form {
   // display: flex;
   // flex-direction: column;
   align-items: center;
 }
-.form, .formItem{
+.form,
+.formItem {
   display: flex;
   flex-direction: column;
-
 }
 // .formItem{
 //     display: flex;
 //     flex-direction: column;
 // }
-.icon{
+.icon {
   font-size: 700%;
-  color:#257BFD;
+  color: #257bfd;
   margin-bottom: 5vmin;
 }
-.item{
+.item {
   width: 50vmin;
 }
-.loginRegister{
+.loginRegister {
   display: flex;
   width: 100%;
-flex-direction:row;
-justify-content: space-between;
-  color:grey;
+  flex-direction: row;
+  justify-content: space-between;
+  color: grey;
 }
 
-.linea{
-width: 100%;
-color: indigo;
-font-weight: bolder;
-margin-bottom: 5vmin;
+.linea {
+  width: 100%;
+  margin-bottom: 5vmin;
+}
+.feedbackMessage{
+  font-style: italic;
+  color: #ff0000;
+  font-size-adjust: initial;
+  font-size:smaller;
 }

@@ -1,1 +1,68 @@
-<p>register works!</p>
+<div class="form">
+    <div class="loginRegister">
+        <div class="link">
+            <button mat-button [routerLink]="[ '/login' ]" routerLinkActive="active">Login</button>
+        </div>
+
+        <div class="link">
+            <button mat-button [routerLink]="[ '/register' ]" routerLinkActive="active">Register</button>
+        </div>
+    </div>
+
+    <div class="linea">
+        <hr>
+    </div>
+
+    <!-- <i class="fas fa-user icon"></i> -->
+    <i class="fas fa-user-plus icon"></i>
+
+
+
+    <form class="formItem" autocomplete="off" [formGroup]="forma" (ngSubmit)="entrar()">
+
+        <mat-form-field class="item">
+            <mat-label>Nombre</mat-label>
+            <input formControlName="Name" type="text" matInput placeholder="Nombre">
+        </mat-form-field>
+            <span class="feedbackMessage" *ngIf=" validCampo('Name')">El campo debe contener solo letras </span>
+ 
+        
+        <mat-form-field class="item">
+            <mat-label>Apellido</mat-label>
+            <input formControlName="LastName" type="text" matInput placeholder="Apellido">
+        </mat-form-field>
+        <span class="feedbackMessage" *ngIf="validCampo('LastName')">El campo debe contener solo letras </span>
+
+        
+        <mat-form-field class="item">
+            <mat-label>Fecha de nacimiento</mat-label>
+            <input formControlName="Date" type="date" matInput placeholder="Fecha de nacimiento">
+        </mat-form-field>
+        <span class="feedbackMessage" *ngIf="validCampo('Date')">El campo es Obligatorio </span>
+        
+        
+        <mat-form-field class="item">
+            <mat-label>Email</mat-label>
+            <input formControlName="Email" type="email" matInput placeholder="juan@gmail.com">
+        </mat-form-field>
+        <span class="feedbackMessage" *ngIf="validCampo('Email')">El campo es Obligatorio, puede contener mayusculas, minusculas y numeros </span>
+
+        
+        <mat-form-field class="item">
+            <mat-label>Contraseña</mat-label>
+            <input formControlName="Password" type="password" matInput placeholder="Contraseña">
+        </mat-form-field>
+        <span class="feedbackMessage" *ngIf="validCampo('Password')">El campo es Obligatorio, debe tener minimo 8 caracteres, mayusculas, minusculas y numeros </span>
+
+       
+
+        <mat-form-field class="item">
+            <mat-label>Confirmar Contraseña</mat-label>
+            <input formControlName="PasswordC" type="password" matInput placeholder="Confirmar Contraseña">
+        </mat-form-field>
+        <span class="feedbackMessage" *ngIf="validCampo('PasswordC')">Las contraseñas no coinciden</span>
+
+
+        <button class="item" mat-raised-button color="primary">Entrar</button>
+    </form>
+</div>

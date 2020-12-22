@@ -23,11 +23,13 @@
       <mat-label>Email</mat-label>
       <input formControlName="Email" type="email" matInput placeholder="juan@gmail.com">
     </mat-form-field>
+    <span class="feedbackMessage" *ngIf="validCampo('Email')">El campo es Obligatorio, puede contener mayusculas, minusculas y numeros </span>
 
     <mat-form-field class="item">
       <mat-label>Contraseña</mat-label>
       <input formControlName="Password" type="password" matInput placeholder="Contraseña">
     </mat-form-field>
+    <span class="feedbackMessage" *ngIf="validCampo('Password')">El campo es Obligatorio, debe tener minimo 8 caracteres, mayusculas, minusculas y numeros </span>
 
     <button class="item" mat-raised-button color="primary">Entrar</button>
   </form>
