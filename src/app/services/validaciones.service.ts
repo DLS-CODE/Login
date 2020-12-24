@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+
+
 
 
 @Injectable({
@@ -7,7 +10,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class ValidacionesService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   validacionPassword(Password: string, PasswordC: string) {
     return (formGroup: FormGroup) => {
@@ -25,5 +28,25 @@ export class ValidacionesService {
     if (forma[campo].invalid && forma[campo].touched) {
       return forma[campo].invalid
     }
+  }
+
+  registrar() {
+
+    let body = {
+      name: "Hugofsdf",
+      lastName: "Carvajalinosfsfsd",
+      date: "1993-07-26",
+      email: "Link_261812@hotmail.com",
+      password: "Link2618",
+      tipo: "ADMIN"
+    }
+    let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+
+    
+
+    this.http.post('/api/registrar/', body,{headers: headers})
+
+
+
   }
 }

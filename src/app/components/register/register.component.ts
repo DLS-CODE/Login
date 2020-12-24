@@ -35,6 +35,7 @@ validCampo(campo:string){
   return this.validaciones.validCampo(campo, this.forma.controls)
 }
   entrar(){
+    this.validaciones.registrar()
     if (this.forma.invalid) {
       console.log(this.forma);
       return
