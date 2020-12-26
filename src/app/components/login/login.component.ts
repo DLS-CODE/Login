@@ -17,11 +17,12 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    
   }
   crearFormulario(){
     this.forma = this.fb.group({
       Email:['dilan@gmail.com', [Validators.required,Validators.minLength(5),Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]],
-      Password: ['Linkgjgj.',[Validators.required, Validators.minLength(8),Validators.pattern("[a-zA-Z0-9]+")]]
+      Password: ['Linkgjgj',[Validators.required, Validators.minLength(8),Validators.pattern("[a-zA-Z0-9]+")]]
       // Password: ['AAAddd2542',[Validators.required, Validators.pattern("^(?=\w\d)(?=\w[A-Z])(?=\w*[a-z])\S{8,16}$")]]
     })
   }
